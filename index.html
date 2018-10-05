@@ -10,6 +10,7 @@
 </head>
 <body>
     <h1>Apps FTW!</h1>
+    <form onsubmit="return handleSubmit(event), false;">
     <p>
         <input name="name" type="text">
     </p>
@@ -29,13 +30,20 @@
     </p>
 
     <p>
-        <input name="toppings" type="checkbox"> Olives
-        <input name="toppings" type="checkbox"> Pineapple
-        <input name="toppings" type="checkbox"> Spinach
+        <label>
+            <input checkedvalue="olives" name="toppings" type="checkbox"> Olives
+        </label>  
+        <label>  
+            <input checkedvalue="pineapple" name="toppings" type="checkbox"> Pineapple
+        </label>
+        <label>
+            <input checkedvalue="spinach" name="toppings" type="checkbox"> Spinach
+        </label>
     </p>
 
-    <button onclick="sayHello()">Click me!</button>
+    <button>Submit</button>
 
     <script src="index.js"></script>
+    </form>
 </body>
 </html>

@@ -1,16 +1,22 @@
 function handleSubmit(event) {
     var form = event.target;
     var elements = form.elements;
-    var guess = elements.guess.value;
-    console.log('guess', guess);
-    var result = document.getElementById('result')
-    result.textContent = 'You made a guess of ' + guess;
-    var answer = 10;
-    if (guess == answer) {result.textContent = 'Correct!';}
-    else if (guess > answer) {result.textContent = 'Too high!';}
-    else if (guess < answer) {result.textContent = 'Too low!';}
+    var toppings = elements.toppings;
 
-    // if equal -> correct
-    // else if less than -> too low
-    // else -> too high
+    // get selected value out of radio buttons
+    var grade = elements.grade;
+    console.log('grade', grade.value);
+    
+    // get selected values out of checkboxes
+    var selectedToppings = '';
+  
+    for(var i = 0; i < toppings.length; i++) {
+        var topping = toppings[i];
+        if(topping.checked) {
+            selectedToppings = selectedToppings + ' ' + topping.value;
+            }
+        
+        console.log(selectedToppings);
+    }
+
 }

@@ -13,15 +13,24 @@
     <form onsubmit="return handleSubmit(event), false;">
         <p>
             <label>
-                How many animals do I have?
-                <input name="guess" type="number">
+                <input value="olives" name="toppings" type="checkbox">olives           
+             </label>
+            <label>
+                    <input value="pinapple" name="toppings" type="checkbox">pineapple
             </label>
-    </p>
+            <label>
+                    <input value="spinach" name="toppings" type="checkbox">spinach
+            </label>
+        </p>
     
-        <button>Guess</button>
-    </form>
+        <p>
+            <label><input value="small"  name="grade" type="radio">small</label>
+            <label><input value="medium"  name="grade" type="radio">medium</label>
+            <label><input value="large"  name="grade" type="radio">large</label>
+        </p>
 
-     <p id="result">Make a guess!</p>
+        <button>Order</button>
+    </form>
 
      <script src="index.js"></script>
 </body>
